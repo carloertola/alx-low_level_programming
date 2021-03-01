@@ -4,6 +4,6 @@
 #include <stdio.h>
 
 int _putchar(char c);
-int coin_count(char *argv[], int count);
+unsigned int coin_count(char *argv[], unsigned int count);
 
 #endif /* HOLBERTON_H */
