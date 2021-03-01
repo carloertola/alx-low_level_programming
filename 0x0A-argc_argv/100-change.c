@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", 0);
 		return (0);
 	}
-	count = coin_count(argv, count);
+	count = coin_count(count, atoi(argv[1]));
 	printf("%d\n", count);
 	return (0);
 }
@@ -31,35 +31,35 @@ int main(int argc, char *argv[])
 /**
  * coin_count - counts the min coins needed for change
  *
- * @argv: argument vector
  * @count: int to count coins
+ * @num: argv[1] changed to int
  * Return: int
  */
-unsigned int coin_count(char *argv[], unsigned int count)
+unsigned int coin_count(unsigned int count, int num)
 {
 	unsigned int sum = 0;
 
-	while (!(sum + 25 > (unsigned int)atoi(argv[1])))
+	while (!(sum + 25 > (unsigned int)num))
 	{
 		sum += 25;
 		count++;
 	}
-	while (!(sum + 10 > (unsigned int)atoi(argv[1])))
+	while (!(sum + 10 > (unsigned int)num))
 	{
 		sum += 10;
 		count++;
 	}
-	while (!(sum + 5 > (unsigned int)atoi(argv[1])))
+	while (!(sum + 5 > (unsigned int)num))
 	{
 		sum += 5;
 		count++;
 	}
-	while (!(sum + 2 > (unsigned int)atoi(argv[1])))
+	while (!(sum + 2 > (unsigned int)num))
 	{
 		sum += 2;
 		count++;
 	}
-	while (!(sum + 1 > (unsigned int)atoi(argv[1])))
+	while (!(sum + 1 > (unsigned int)num))
 	{
 		sum += 1;
 		count++;
