@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	if (argc != 2)
 	{
@@ -35,31 +35,31 @@ int main(int argc, char *argv[])
  * @count: int to count coins
  * Return: int
  */
-int coin_count(char *argv[], int count)
+unsigned int coin_count(char *argv[], unsigned int count)
 {
-	int sum = 0;
+	unsigned int sum = 0;
 
-	while (!(sum + 25 > atoi(argv[1])))
+	while (!(sum + 25 > (unsigned int)atoi(argv[1])))
 	{
 		sum += 25;
 		count++;
 	}
-	while (!(sum + 10 > atoi(argv[1])))
+	while (!(sum + 10 > (unsigned int)atoi(argv[1])))
 	{
 		sum += 10;
 		count++;
 	}
-	while (!(sum + 5 > atoi(argv[1])))
+	while (!(sum + 5 > (unsigned int)atoi(argv[1])))
 	{
 		sum += 5;
 		count++;
 	}
-	while (!(sum + 2 > atoi(argv[1])))
+	while (!(sum + 2 > (unsigned int)atoi(argv[1])))
 	{
 		sum += 2;
 		count++;
 	}
-	while (!(sum + 1 > atoi(argv[1])))
+	while (!(sum + 1 > (unsigned int)atoi(argv[1])))
 	{
 		sum += 1;
 		count++;
