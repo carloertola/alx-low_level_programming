@@ -1,2 +1,2 @@
-# Pre-processor
-Learning how to use pre-processor directives, constants and macros
+# Preprocessor
+There's a lot that can be done using pre-processor directives, constants and macros
