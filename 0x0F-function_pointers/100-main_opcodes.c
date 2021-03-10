@@ -22,8 +22,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	printf("%.2x", *(unsigned char *)a[0];
+	printf("%.2x", *(unsigned char *)a);
+	a++;
 	for (i = 1; i < atoi(argv[1]); i++)
-		printf(" %.2x", *(unsigned char *)a[i];
+	{
+		printf(" %.2x", *(unsigned char *)a);
+		a++;
+	}
 	return (0);
 }
