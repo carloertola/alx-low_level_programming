@@ -29,5 +29,6 @@ int main(int argc, char *argv[])
 		printf(" %.2x", *(unsigned char *)a);
 		a++;
 	}
+	printf("\n");
 	return (0);
 }
