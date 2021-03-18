@@ -17,17 +17,19 @@ list_t *add_node(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
-	while (*str++)
+	while (str[len])
 		len++;
 	new_node->str = strdup(str);
-	if (!new_node->str)
-	{
-		free(new_node->str);
-		free(new_node);
-		return (NULL);
-	}
 	new_node->len = len;
-	new_node->next = *head;
-	*head = new_node;
+	if (!*head)
+	{
+		new_node->next = NULL;
+		*head = new_node;
+	}
+	else
+	{
+		new_node->next = *head;
+		*head = new_node;
+	}
 	return (*head);
 }
