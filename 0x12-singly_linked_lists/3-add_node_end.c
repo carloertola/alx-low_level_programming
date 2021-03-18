@@ -13,7 +13,10 @@ list_t *add_node_end(list_t **head, const char *str)
 	unsigned int len = 0;
 
 	if (!new_node)
+	{
+		free(new_node);
 		return (NULL);
+	}
 	while (str[len])
 		len++;
 	new_node->str = strdup(str);
