@@ -5,7 +5,7 @@
  *
  * @head: double pointer to head node
  * @n: integer data for new node
- * Return: number of nodes
+ * Return: pointer to added node
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
