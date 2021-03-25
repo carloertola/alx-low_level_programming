@@ -9,7 +9,7 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (!(index == NULL || n == NULL))
-		return ((n & (1 << index)) >> index);
-	return (-1);
+	if (index > 32 * 8 || !n)
+		return (-1);
+	return ((n & (1 << index)) >> index);
 }
