@@ -27,7 +27,7 @@ ssize_t print_string(char *str)
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
+	int fd, rd;
 	ssize_t chars_printed = 0;
 	char *buffer = malloc(sizeof(char) * (letters + 1));
 
@@ -45,7 +45,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	read(fd, buffer, letters);
+	rd = read(fd, buffer, letters);
+	if (rd == -1)
+	{
+		free(buffer);
+		return (0);
+	}
 	chars_printed = print_string(buffer);
 	close(fd);
 	free(buffer);
